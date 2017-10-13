@@ -1,0 +1,8 @@
+*.pptx
+*.filters
+*.user
+
+out.txt
+
+.vs
+Debug
