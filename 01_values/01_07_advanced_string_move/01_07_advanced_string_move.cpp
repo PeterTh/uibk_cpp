@@ -18,7 +18,9 @@ struct string
 	}
 
 	~string() {
-		delete[] data;
+		if(data != nullptr) {
+			delete[] data;
+		}
 	}
 
 	string(const string& from) {
@@ -26,6 +28,12 @@ struct string
 		size_t size = strlen(from.data) + 1;
 		data = new char[size];
 		memcpy(data, from.data, size);
+	}
+
+	string(string&& from) {
+		std::cout << "Moving string" << std::endl;
+		data = from.data;
+		from.data = nullptr;
 	}
 };
 
@@ -43,4 +51,6 @@ int main() {
 	string c(funReturningString());
 	// we *don't* need a copy, but still have to make one
 
+	string b(std::move(a));
+	std::cout << "a.data = " << a.data << std::endl;
 }
