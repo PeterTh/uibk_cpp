@@ -12,7 +12,6 @@ struct true_type : public set_bool<true> {};
 struct false_type : public set_bool<false> {};
 
 
-
 /// first, we need a way to compare two types
 
 template<typename T, typename U>
@@ -29,24 +28,13 @@ template<typename T, typename U>
 constexpr int is_same_v = is_same<T, U>::value;
 
 
-
-/// we also need a utility to see whether we are actually acting on a tuple
-
-template<typename Test>
-struct is_tuple : false_type {};
-template<typename... Args>
-struct is_tuple<std::tuple<Args...>> : true_type {};
-
-template<typename T>
-constexpr int is_tuple_v = is_tuple<T>::value;
-
-
-
 /// now we can inspect the tuple
 
 template<class Tuple, class T>
 struct tuple_contains {
-	static_assert(is_tuple_v<Tuple>, "tuple_contains called on non-tuple");
+	// this condition is always false when we reach this case,
+	// but we need it to be *dependent*, which e.g. just "false" wouldn't be
+	static_assert(sizeof(Tuple) == -1, "tuple_contains called on non-tuple");
 };
 
 template<class T, class Head, class... Rest>

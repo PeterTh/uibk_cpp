@@ -1,8 +1,12 @@
 *.pptx
 *.filters
 *.user
+*.code-workspace
+*.7z
 
 out.txt
 
 .vs
 Debug
+x64
+exam

@@ -6,10 +6,10 @@
 
 template<typename T>
 class Vec2D    // note: private inheritance is OK here!
-	: boost::addable< Vec2D<T>           // point + point
-	, boost::subtractable< Vec2D<T>      // point - point
-	, boost::dividable2< Vec2D<T>, T     // point / T
-	, boost::multipliable2< Vec2D<T>, T  // point * T, T * point
+	: boost::addable< Vec2D<T>          // point + point
+	, boost::subtractable< Vec2D<T>     // point - point
+	, boost::dividable2< Vec2D<T>, T    // point / T
+	, boost::multipliable2< Vec2D<T>, T // point * T, T * point
 	> > > > // note: base class chaining technique
 {
 	T x_;
