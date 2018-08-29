@@ -49,8 +49,10 @@ int main() {
 	string a(x);
 	// we need a copy, program could look at x later
 	string c(funReturningString());
-	// we *don't* need a copy, but still have to make one
+	// we *don't* need a copy, and now we also don't create one!
 
+	// if we know that we won't need some value any more, we can explicitly move it:
 	string b(std::move(a));
-	std::cout << "a.data = " << a.data << std::endl;
+	// however, accessing the value later is an error!
+	//std::cout << "a.data = " << a.data << std::endl;
 }
