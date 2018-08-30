@@ -33,5 +33,12 @@ int main() {
 		std::cout << v << ", ";
 	}
 	std::cout << std::endl;
+
+	for(auto it = std::make_reverse_iterator(vec.cend()); it != std::make_reverse_iterator(vec.cbegin()); it++) {
+		std::cout << *it << ", ";
+	}
+	std::cout << std::endl;
+
+	// there is a shorthand for that: vec.crend() / vec.crbegin();
 }
 

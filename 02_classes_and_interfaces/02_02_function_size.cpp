@@ -62,11 +62,11 @@ bool doRaysCollide(float x1, float y1, float z1, float dx1, float dy1, float dz1
 	// ...
 }
 
+// better:
+
 struct Point {
 	// ...
 };
-
-// better:
 
 bool doRaysCollide(Point start1, Point end1, Point start2, Point end2) {
 	// ...
@@ -90,13 +90,13 @@ int main() {
 
 	// Terrible function design
 	// -- no idea what this does just by looking at the invocation
-	searchAndReplace("Hello World", "hello", "Goodbye", true, false, false, false);
+	searchAndReplace("Hello World, hello universe", "hello", "Goodbye", true, true, false, false);
 
 	// a bit better
-	searchAndReplace("Hello World", "hello", "Goodbye", ReplaceParameters::IGNORE_CASE);
+	searchAndReplace("Hello World", "hello", "Goodbye", ReplaceParameters::IGNORE_CASE | ReplaceParameters::REPLACE_ALL);
 
 	// much better
-	searchAndReplaceFirst("Hello World", StringIgnoringCase("hello"), "Goodbye");
+	searchAndReplaceAll("Hello World", StringIgnoringCase("hello"), "Goodbye");
 
 	return 0;
 }

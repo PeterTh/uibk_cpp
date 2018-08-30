@@ -25,8 +25,7 @@ namespace std
 {
 	template<> struct hash<BasicHashable>
 	{
-		size_t operator()(const BasicHashable& s) const noexcept
-		{
+		size_t operator()(const BasicHashable& s) const noexcept {
 			return std::hash<int>{}(s.val);
 		}
 	};

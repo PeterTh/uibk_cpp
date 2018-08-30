@@ -35,9 +35,9 @@ struct FullName {
 	{}
 
 	bool containsAnyName(std::vector<std::string> s) {
-		return std::any_of(s.cbegin(), s.cend(), [&](const std::string& str) {
-			return first == str || last == str;
-		});
+		//return std::any_of(s.cbegin(), s.cend(), [&](const std::string& str) {
+		//	return first == str || last == str;
+		//});
 		// [&] captures "this" by reference (or rather, the pointer by value)
 
 		/// the following does not work: (cannot capture members directly)
@@ -55,7 +55,7 @@ struct FullName {
 		//	return first == str || last == str;
 		//});
 
-		/// by-copy capture of the current object (C++17)
+		/// by-copy capture of the current object
 		//return std::any_of(s.cbegin(), s.cend(), [*this](const std::string& str) {
 		//	return first == str || last == str;
 		//});

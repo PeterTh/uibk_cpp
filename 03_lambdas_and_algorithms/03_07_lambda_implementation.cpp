@@ -32,7 +32,7 @@ void test1() {
 
 			// Call operator constructed from the lambda expression
 			// operator is "const" because no "mutable" was specified for the lambda
-			int operator()(int i) const {
+			int operator()(int i) const constexpr {
 				return a*i;
 			}
 		};
@@ -80,7 +80,7 @@ void test2() {
 			// Call operator constructed from the lambda expression
 			// operator is not "const" because of "mutable"
 			// operator is "noexcept" as it was declared in the lambda expression
-			int operator()(int i, const int& j) noexcept {
+			int operator()(int i, const int& j) noexcept constexpr {
 				b *= (float)c;
 				return a*i*j;
 			}
@@ -126,7 +126,8 @@ void test3() {
 
 			// Call operator constructed from the lambda expression
 			// operator is "constexpr" as specified
-			constexpr int operator()(int i, int j) {
+			// note that as of C++17, the examples in test1 and test2 are also autoamtically "constexpr"
+			int operator()(int i, int j) constexpr {
 				return i*j;
 			}
 		};
