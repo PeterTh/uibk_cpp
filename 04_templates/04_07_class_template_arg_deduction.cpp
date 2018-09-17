@@ -1,7 +1,6 @@
-// you can see this example working with GCC 7.2 here:
-// https://godbolt.org/g/1qCncm
+// you can see this example working with recent GCC and Clang versions here:
+// https://godbolt.org/z/WzFsJp
 
-#include <initializer_list>
 #include <algorithm>
 #include <type_traits>
 #include <tuple>
@@ -16,13 +15,13 @@ public:
 	template<typename ...Args>
 	Vector(Args... args)
 	{
-		std::initializer_list init({ args... });
+		auto init = {args...};
 		std::copy(init.begin(), init.end(), contents);
 	}
 };
 
 template<int N, typename... Ts> using NthTypeOf =
-	typename std::tuple_element<N, std::tuple<Ts...>>::type;
+        typename std::tuple_element<N, std::tuple<Ts...>>::type;
 
 // deduction guide for template "Vector":
 

@@ -4,6 +4,8 @@
 
 // ---------------------------------------------- template type parameter pack
 
+#if true
+
 template<typename T, typename ...Rest>
 T sum(T t, Rest... rest) {
 	return t + sum(rest...);
@@ -14,13 +16,16 @@ T sum(T last) {
 	return last;
 }
 
+#else
+
 // C++17 fold expression:
 
-//template<typename T, typename ...Rest>
-//T sum(T t, Rest... rest) {
-//	return (t + ... + rest);
-//}
+template<typename T, typename ...Rest>
+T sum(T t, Rest... rest) {
+	return (t + ... + rest);
+}
 
+#endif
 
 // ---------------------------------------------- template template parameter pack
 // ... left as an exercise

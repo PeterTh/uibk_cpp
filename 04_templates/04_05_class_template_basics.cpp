@@ -3,8 +3,6 @@
 
 template<typename ScalarType, int Length>
 class Vector {
-	using TT = Vector<ScalarType, Length>;
-
 	ScalarType contents[Length];
 
   public:
@@ -24,8 +22,8 @@ class Vector {
 		return contents[idx];
 	}
 
-	TT operator+(const TT& other) const {
-		TT ret;
+	Vector operator+(const Vector& other) const {
+		Vector ret;
 		for(int i = 0; i < Length; ++i) {
 			ret[i] = contents[i] + other[i];
 		}
