@@ -38,7 +38,8 @@ int main() {
 		Foo f;
 		std::cout << "f.bla()   : " << f.bla() << std::endl;
 
-		// both are equivalent
+		// both are equivalent, the first style is preferable 
+		// since it makes the fact that bla is a static member fn clear
 	}
 	std::cout << std::endl;
 	{

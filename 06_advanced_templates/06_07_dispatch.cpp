@@ -71,8 +71,6 @@ void dump(T t) {
 
 /// Option 2: templates + metaprogramming /////////////////////////////////////
 
-#if true
-
 // first, we need a way to identify our objects -> a metafunction
 
 template<typename T, class = void>
@@ -86,6 +84,8 @@ struct has_print_to<T,
 template<typename T>
 constexpr bool has_print_to_v = has_print_to<T>::value;
 
+#if false
+
 // now we can write our template
 
 template<typename T>
@@ -98,6 +98,23 @@ std::enable_if_t<!has_print_to_v<T>> dump(T t) {
 }
 
 // Will work automatically for all classes matching the pattern
+
+#endif 
+
+/// Option 3: C++17 "if constexpr" ////////////////////////////////////////////
+
+#if true
+
+// We use the same "has_print_to" trait defined above, but skip enable_if
+
+template<typename T>
+void dump(T t) {
+	if constexpr(has_print_to_v<T>) {
+		t.print_to(std::cerr);
+	} else {
+		std::cerr << t;
+	}
+}
 
 #endif
 
