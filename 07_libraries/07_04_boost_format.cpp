@@ -37,7 +37,7 @@ int main() {
 	//   all those are the same,  it prints  "(x,y) = (  -23,  +35) \n"
 
 
-	/// printf directives's type-flag can be used to pass formatting options :
+	/// printf directives' type-flag can be used to pass formatting options :
 	cout << format("_%1$4d_ is : _%1$#4x_, _%1$#4o_, and _%1$s_ by default\n") % 18;
 	//          prints  "_  18_ is : _0x12_, _ 022_, and _18_ by default\n"
 
@@ -55,7 +55,7 @@ int main() {
 
 	///    Enforcing the right number of arguments
 
-	// Too much arguments will throw an exception when feeding the unwanted argument :
+	// Too many arguments will throw an exception when feeding the unwanted argument :
 	try {
 		format(" %1% %1% ") % 101 % 102;
 		// the format-string refers to ONE argument, twice. not 2 arguments.
