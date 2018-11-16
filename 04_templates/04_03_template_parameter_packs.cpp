@@ -6,14 +6,14 @@
 
 #if true
 
+template <typename T>
+T sum(T last) {
+	return last;
+}
+
 template<typename T, typename ...Rest>
 T sum(T t, Rest... rest) {
 	return t + sum(rest...);
-}
-
-template<typename T>
-T sum(T last) {
-	return last;
 }
 
 #else
