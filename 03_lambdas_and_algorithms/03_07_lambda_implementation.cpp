@@ -26,6 +26,7 @@ void test1() {
 
 			// not assignable
 			Unnamed1& operator=(const Unnamed1&) = delete;
+			Unnamed1& operator=(const Unnamed1&&) = delete;
 
 			// default destructor
 			~Unnamed1() = default;
@@ -75,6 +76,7 @@ void test2() {
 			Unnamed(const Unnamed&) = default;
 			Unnamed(Unnamed&&) = default;
 			Unnamed& operator=(const Unnamed&) = delete;
+			Unnamed& operator=(const Unnamed&&) = delete;
 			~Unnamed() = default;
 
 			// Call operator constructed from the lambda expression
@@ -117,6 +119,7 @@ void test3() {
 			Unnamed(const Unnamed&) = default;
 			Unnamed(Unnamed&&) = default;
 			Unnamed& operator=(const Unnamed&) = delete;
+			Unnamed& operator=(const Unnamed&&) = delete;
 			~Unnamed() = default;
 
 			operator fun_ptr_type() const {
