@@ -26,8 +26,8 @@ int main() {
 
 	// std::back_inserter is an iterator adapter
 	auto inserter = std::back_inserter(vec);
-	inserter++ = 55;
-	inserter++ = 56;
+	*inserter++ = 55;
+	*inserter++ = 56;
 
 	for(int v : vec) {
 		std::cout << v << ", ";
