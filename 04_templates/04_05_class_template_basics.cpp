@@ -3,13 +3,10 @@
 
 template<typename ScalarType, int Length>
 class Vector {
-	ScalarType contents[Length];
+	ScalarType contents[Length] = {};
 
   public:
-	Vector()
-	{
-		for(int i = 0; i < Length; ++i) contents[i] = 0;
-	}
+	Vector() {}
 	Vector(std::initializer_list<ScalarType> init)
 	{
 		std::copy(init.begin(), init.end(), contents);
