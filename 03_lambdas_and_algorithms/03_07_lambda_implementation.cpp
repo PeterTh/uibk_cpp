@@ -39,7 +39,6 @@ void test1() {
 		};
 
 		auto x = Unnamed1{ a };
-		x(4);
 		std::cout << x(4) << std::endl;
 	}
 }
