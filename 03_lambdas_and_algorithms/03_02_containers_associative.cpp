@@ -48,6 +48,11 @@ void map_test() {
 		std::cout << entry.first.val << " : " << entry.second << std::endl;
 	}
 	std::cout << std::endl;
+
+	// C++17 Structured Binding
+	for(auto [k, v] : test_map) {
+		std::cout << k.val << " : " << v << std::endl;
+	}
 }
 
 

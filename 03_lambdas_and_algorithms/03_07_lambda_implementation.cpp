@@ -26,19 +26,19 @@ void test1() {
 
 			// not assignable
 			Unnamed1& operator=(const Unnamed1&) = delete;
+			Unnamed1& operator=(const Unnamed1&&) = delete;
 
 			// default destructor
 			~Unnamed1() = default;
 
 			// Call operator constructed from the lambda expression
 			// operator is "const" because no "mutable" was specified for the lambda
-			int operator()(int i) const constexpr {
+			constexpr int operator()(int i) const {
 				return a*i;
 			}
 		};
 
 		auto x = Unnamed1{ a };
-		x(4);
 		std::cout << x(4) << std::endl;
 	}
 }
@@ -75,12 +75,13 @@ void test2() {
 			Unnamed(const Unnamed&) = default;
 			Unnamed(Unnamed&&) = default;
 			Unnamed& operator=(const Unnamed&) = delete;
+			Unnamed& operator=(const Unnamed&&) = delete;
 			~Unnamed() = default;
 
 			// Call operator constructed from the lambda expression
 			// operator is not "const" because of "mutable"
 			// operator is "noexcept" as it was declared in the lambda expression
-			int operator()(int i, const int& j) noexcept constexpr {
+			constexpr int operator()(int i, const int& j) noexcept {
 				b *= (float)c;
 				return a*i*j;
 			}
@@ -117,6 +118,7 @@ void test3() {
 			Unnamed(const Unnamed&) = default;
 			Unnamed(Unnamed&&) = default;
 			Unnamed& operator=(const Unnamed&) = delete;
+			Unnamed& operator=(const Unnamed&&) = delete;
 			~Unnamed() = default;
 
 			operator fun_ptr_type() const {
@@ -127,7 +129,7 @@ void test3() {
 			// Call operator constructed from the lambda expression
 			// operator is "constexpr" as specified
 			// note that as of C++17, the examples in test1 and test2 are also autoamtically "constexpr"
-			int operator()(int i, int j) constexpr {
+			constexpr int operator()(int i, int j) {
 				return i*j;
 			}
 		};
