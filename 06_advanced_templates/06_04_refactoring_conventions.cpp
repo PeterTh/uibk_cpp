@@ -11,9 +11,9 @@ struct set_type {
 // Refactoring: use inheritance to set the result type member:
 
 template<typename T>
-struct remove_const : public set_type<T> {};
+struct remove_const : set_type<T> {};
 template<typename T>
-struct remove_const<const T> : public set_type<T> {};
+struct remove_const<const T> : set_type<T> {};
 
 // Refactoring: create a alias template to save writing ::type everywhere
 // Convention: this has the suffix "_t"
@@ -31,9 +31,9 @@ struct set_int {
 };
 
 template<typename T>
-struct dimof : public set_int<0> {};
+struct dimof : set_int<0> {};
 template<typename T, int N>
-struct dimof<T[N]> : public set_int<1 + dimof<T>::value> {};
+struct dimof<T[N]> : set_int<1 + dimof<T>::value> {};
 
 // Refactoring: create a *variable* template to save writing ::value everywhere
 // Convention: this has the suffix "_v"

@@ -37,13 +37,13 @@ struct tuple_contains {
 	static_assert(sizeof(Tuple) == -1, "tuple_contains called on non-tuple");
 };
 
+template<class T>
+struct tuple_contains<std::tuple<>, T> : public false_type {};
+
 template<class T, class Head, class... Rest>
 struct tuple_contains<std::tuple<Head, Rest...>, T> : public set_bool<
 	is_same_v<Head, T> || tuple_contains<std::tuple<Rest...>, T>::value
 > {};
-
-template<class T>
-struct tuple_contains<std::tuple<>, T> : public false_type {};
 
 template<typename T, typename U>
 constexpr int tuple_contains_v = tuple_contains<T, U>::value;
