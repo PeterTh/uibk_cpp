@@ -24,9 +24,9 @@ int Foo::x = 2;
 
 // inline static data members do not need to be defined
 // separately -- see https://godbolt.org/g/gBSS7V
-//struct Bar {
-//	inline static int x;
-//};
+struct Bar {
+	inline static int x;
+};
 
 
 int main() {
@@ -38,7 +38,7 @@ int main() {
 		Foo f;
 		std::cout << "f.bla()   : " << f.bla() << std::endl;
 
-		// both are equivalent, the first style is preferable 
+		// both are equivalent, the first style is preferable
 		// since it makes the fact that bla is a static member fn clear
 	}
 	std::cout << std::endl;

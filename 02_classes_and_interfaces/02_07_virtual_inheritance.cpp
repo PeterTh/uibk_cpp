@@ -18,7 +18,7 @@ void nonVirtualInheritance() {
 	D* dp = &d;
 	B* dpb = dp;
 	C* dpc = dp;
-	//A* dpa = dp;
+//	A* dpa = dp;
 	// Note: the line above is ambiguous!
 }
 
