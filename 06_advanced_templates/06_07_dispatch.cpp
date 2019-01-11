@@ -99,7 +99,7 @@ std::enable_if_t<!has_print_to_v<T>> dump(T t) {
 
 // Will work automatically for all classes matching the pattern
 
-#endif 
+#endif
 
 /// Option 3: C++17 "if constexpr" ////////////////////////////////////////////
 

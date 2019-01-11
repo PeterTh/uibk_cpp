@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="07_10_eigen.cpp" />
+    <ClCompile Include="07_04_boost_format.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
@@ -77,12 +77,24 @@
     <RunCodeAnalysis>false</RunCodeAnalysis>
     <EnableCppCoreCheck>true</EnableCppCoreCheck>
     <IncludePath>D:\dev\eigen;$(IncludePath)</IncludePath>
+    <OutDir>$(TMP)\$(ProjectName)\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(TMP)\$(ProjectName)\tmp\$(Platform)\$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <CodeAnalysisRuleSet>NativeRecommendedRules.ruleset</CodeAnalysisRuleSet>
     <RunCodeAnalysis>false</RunCodeAnalysis>
     <EnableCppCoreCheck>true</EnableCppCoreCheck>
     <IncludePath>D:\dev\eigen;$(IncludePath)</IncludePath>
+    <OutDir>$(TMP)\$(ProjectName)\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(TMP)\$(ProjectName)\tmp\$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(TMP)\$(ProjectName)\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(TMP)\$(ProjectName)\tmp\$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(TMP)\$(ProjectName)\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(TMP)\$(ProjectName)\tmp\$(Platform)\$(Configuration)\</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>

@@ -5,8 +5,9 @@
 
 void replace_string_thread(std::string& target, std::mutex& target_mutex,
 		const std::string to_replace, const std::string replacement) {
-	std::lock_guard<std::mutex> lock(target_mutex);
+	std::lock_guard lock(target_mutex);
 	//             ^ in C++17 we can omit the template parameter (deduction guides)
+	//               in earlier versions we need to explicitly write "<std::mutex>"
 	// lock_guard is a *scoped lock*
 	target.replace(target.find(to_replace), to_replace.size(), replacement);
 }

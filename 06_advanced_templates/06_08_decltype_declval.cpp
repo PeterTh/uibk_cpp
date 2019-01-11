@@ -22,6 +22,6 @@ int main() {
 	std::cout << sizeof(fun()) << std::endl;
 	// also allowed -- also an unevaluated context
 
-	// fun();
+	//fun();
 	// ^ this causes a linker error (used in evaluated context)
 }

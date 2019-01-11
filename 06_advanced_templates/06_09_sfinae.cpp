@@ -13,7 +13,7 @@ bool is_odd(int[1][N % 2 == 0 ? 1 : -1] = nullptr) {
 
 int main() {
 
-	// int x[-1];
+	//int x[-1];
 	// ^ this is a compiler error - we can't use a negative array length
 
 	std::cout << "is_odd<0>()  : " << is_odd<0>() << std::endl;
