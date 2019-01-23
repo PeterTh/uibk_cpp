@@ -14,10 +14,10 @@ int main() {
 
 	auto largest_future = std::async([]() {
 		// find largest file in working directory
-		decltype(fs::file_size(std::declval<fs::path>())) largest_size = 0;
+		std::uintmax_t largest_size = 0;
 		fs::path largest;
 		try {
-			for(auto& p : fs::recursive_directory_iterator("R:/")) {
+			for(auto& p : fs::recursive_directory_iterator(".")) {
 				if(p.is_regular_file()) {
 					auto path = p.path();
 					auto s = fs::file_size(path);
