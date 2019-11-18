@@ -7,7 +7,7 @@ Introduction and management information can be found in **00_introduction.pdf**.
 
 ## Video recordings
 
-Some lecture recordings are available:
+*Some* lecture recordings (from 2018) are available:
 
 - [Lecture 4 - Interface Design: Classes](https://www.youtube.com/watch?v=MQKgGe2sK-o)
 - [Lecture 5 - Generic Programming with Templates](https://www.youtube.com/watch?v=KqSeUJUzSEU)
