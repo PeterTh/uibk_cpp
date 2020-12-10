@@ -19,8 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="07_08_boost_program_options.cpp" />
-    <ClCompile Include="07_10_eigen.cpp" />
+    <ClCompile Include="07_04_boost_format.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>

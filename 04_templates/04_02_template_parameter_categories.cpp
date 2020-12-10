@@ -8,7 +8,7 @@
 
 // Non-type template parameters
 
-template<int I, int N>
+template<int I, size_t N>
 double get_element(std::array<double,N> arr) {
 	static_assert(I >= 0 && I < N, "Array access out of bounds");
 	return arr[I];

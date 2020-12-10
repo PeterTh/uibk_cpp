@@ -12,7 +12,6 @@ struct true_type : set_bool<true> {};
 struct false_type : set_bool<false> {};
 
 
-
 /// first, we need a way to compare two types
 
 template<typename T, typename U>
@@ -29,7 +28,6 @@ template<typename T, typename U>
 constexpr int is_same_v = is_same<T, U>::value;
 
 
-
 /// now we can inspect the tuple
 
 template<class Tuple, class T>
@@ -41,6 +39,7 @@ template<class T, class Head, class... Rest>
 struct tuple_contains<std::tuple<Head, Rest...>, T> : set_bool<
 	is_same_v<Head, T> || tuple_contains<std::tuple<Rest...>, T>::value
 > {};
+// step case -- recursion
 
 template<typename T, typename U>
 constexpr int tuple_contains_v = tuple_contains<T, U>::value;
