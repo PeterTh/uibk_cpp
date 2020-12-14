@@ -60,8 +60,7 @@ concept Semiregular =
 		   std::default_initializable<T> && std::copy_constructible<T> && std::destructible<T> 
 		&& requires(T a, std::size_t n) {
 	requires std::same_as<T*, decltype(&a)>;       // nested: "Same<...> evaluates to true"
-	{ a.~T() }
-	noexcept;                                      // compound: "a.~T()" is a valid expression that doesn't throw
+	{ a.~T() } noexcept;                           // compound: "a.~T()" is a valid expression that doesn't throw
 	requires std::same_as<T*, decltype(new T)>;    // nested: "Same<...> evaluates to true"
 	requires std::same_as<T*, decltype(new T[n])>; // nested
 	{delete new T};                                // compound

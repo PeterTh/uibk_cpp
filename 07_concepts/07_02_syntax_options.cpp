@@ -7,15 +7,13 @@ concept Hashable = requires(T a) {
 	std::hash<T>{}(a);
 };
 
-struct meow {};
-
 // can appear as the last element of a function declarator
 template <typename T>
 void f(T&&) requires Hashable<T>; 
 
 // or right after a template parameter list
 template <typename T>
-requires Hashable<T> 
+requires Hashable<T> void g(T&&);
 
 #if 1
 
@@ -32,6 +30,8 @@ template<class T>
 void fun(T) requires Hashable<T> {}
 
 #endif
+
+struct meow {};
 
 int main() {
 	fun(10); // OK, int satisfies Hashable

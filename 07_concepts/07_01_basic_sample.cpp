@@ -12,8 +12,6 @@ concept Hashable = requires(T a) {
 	std::hash<T>{}(a);
 };
 
-struct meow {};
-
 template<typename T>
 	requires Hashable<T> 
 void fun(T) {
@@ -21,6 +19,8 @@ void fun(T) {
 	std::hash(T);
 	// ... internal code
 }
+
+struct meow {};
 
 int main() {
 	fun("abc"s); // OK, std::string satisfies Hashable
