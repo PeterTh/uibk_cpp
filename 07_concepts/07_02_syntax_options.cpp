@@ -15,7 +15,7 @@ void f(T&&) requires Hashable<T>;
 template <typename T>
 requires Hashable<T> void g(T&&);
 
-#if 1
+#if 0
 
 // Kind-of-terse syntax
 
