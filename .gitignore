@@ -9,4 +9,5 @@ out.txt
 .vs
 Debug
 x64
-exam
+exam*
+stream
