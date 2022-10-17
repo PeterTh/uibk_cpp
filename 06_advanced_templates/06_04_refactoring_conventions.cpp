@@ -20,6 +20,7 @@ struct remove_const<const T> : set_type<T> {};
 
 template<typename T>
 using remove_const_t = typename remove_const<T>::type;
+// note: "typename" here disambiguates the parsing; no longer required in C++20
 
 
 

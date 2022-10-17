@@ -3,8 +3,6 @@
 
 template<typename ScalarType, int Length>
 class Vector {
-	using TT = Vector<ScalarType, Length>;
-
 	ScalarType contents[Length];
 
 public:
@@ -31,8 +29,7 @@ public:
 template<typename ScalarType>
 class Vector<ScalarType, 2> {
 	ScalarType _x = 0, _y = 0;
-	using TT = Vector<ScalarType, 2>;
-
+	
   public:
 	Vector() {}
 	Vector(ScalarType x, ScalarType y) : _x(x), _y(y) {}

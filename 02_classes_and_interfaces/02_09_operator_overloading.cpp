@@ -9,11 +9,11 @@ namespace bla {
 
 		Vec2D(double x, double y) : x(x), y(y) {}
 
-		Vec2D operator+(Vec2D other) {
+		Vec2D operator+(Vec2D other) const {
 			return { x + other.x, y + other.y };
 		}
 
-		Vec2D operator*(double factor) {
+		Vec2D operator*(double factor) const {
 			return { x*factor, y*factor };
 		}
 	};
@@ -44,7 +44,7 @@ namespace bla {
 } // end namespace
 
 void standaloneOps() {
-	// note: we need to use the namspace qualification here
+	// note: we need to use the namespace qualification here
 	bla::Vec2D b{ 3.0, 2.0 };
 	// ... and here
 	bla::doSomethingWithout();
@@ -57,6 +57,6 @@ void standaloneOps() {
 }
 
 int main() {
-	//bla::basicOps();
-	standaloneOps();
+	bla::basicOps();
+	//standaloneOps();
 }

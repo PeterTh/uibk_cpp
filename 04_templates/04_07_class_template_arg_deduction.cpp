@@ -7,8 +7,6 @@
 
 template<typename ScalarType, int Length>
 class Vector {
-	using TT = Vector<ScalarType, Length>;
-
 	ScalarType contents[Length];
 
 public:
