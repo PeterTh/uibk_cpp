@@ -25,7 +25,7 @@ struct is_same<T,T> : true_type {};
 //   we inherit from true_type to set our return "::value" to true
 
 template<typename T, typename U>
-constexpr int is_same_v = is_same<T, U>::value;
+constexpr bool is_same_v = is_same<T, U>::value;
 
 
 /// now we can inspect the tuple
@@ -42,7 +42,7 @@ struct tuple_contains<std::tuple<Head, Rest...>, T> : set_bool<
 // step case -- recursion
 
 template<typename T, typename U>
-constexpr int tuple_contains_v = tuple_contains<T, U>::value;
+constexpr bool tuple_contains_v = tuple_contains<T, U>::value;
 
 
 
