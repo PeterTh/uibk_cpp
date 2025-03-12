@@ -1,4 +1,4 @@
-
+// https://godbolt.org/z/qKef3jdWq
 #include <stdlib.h>
 #include <string.h>
 #include <iostream>
