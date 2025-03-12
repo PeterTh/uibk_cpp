@@ -1,3 +1,4 @@
+// https://godbolt.org/z/h8xMTYjj1
 #include <vector>
 #include <functional>
 #include <iostream>

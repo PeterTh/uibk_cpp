@@ -1,3 +1,4 @@
+// https://godbolt.org/z/W3T5oG5sc
 #include <iostream>
 
 void test1() {
