@@ -1,3 +1,4 @@
+// https://godbolt.org/z/jr9cr9GPP
 #include <iostream>
 #include <string>
 
