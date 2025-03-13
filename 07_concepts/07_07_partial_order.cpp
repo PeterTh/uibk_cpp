@@ -1,3 +1,4 @@
+// https://godbolt.org/z/fGa1GWf3j
 #include <iostream>
 
 template<typename T>
