@@ -1,3 +1,4 @@
+// https://godbolt.org/z/aWMo3rfK7
 #include <string>
 #include <iostream>
 #include <cmath>

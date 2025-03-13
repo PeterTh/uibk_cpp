@@ -1,3 +1,4 @@
+// https://godbolt.org/z/j4EnEaeGG
 #include <iostream>
 #include <string>
 #include <thread>
