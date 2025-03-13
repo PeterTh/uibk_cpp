@@ -1,3 +1,4 @@
+// https://godbolt.org/z/csjnTxjcT
 #include <iostream>
 
 struct Trace {

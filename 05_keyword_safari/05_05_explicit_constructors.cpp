@@ -1,3 +1,4 @@
+// https://godbolt.org/z/hnhxejcfE
 #include <iostream>
 
 struct Point {

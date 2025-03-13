@@ -1,5 +1,5 @@
 // Sample adapted from cppreference
-// Available in compiler explorer: https://godbolt.org/z/7YY3sb9YP
+// Available in compiler explorer: https://godbolt.org/z/oKf63hzaE
 
 #include <iostream>
 
