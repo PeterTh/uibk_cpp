@@ -1,4 +1,4 @@
-// https://godbolt.org/z/PErGq4E8o
+// https://godbolt.org/z/WYEoW5bzz
 // basic requires expression in a concept definition
 template <typename T>
 concept Addable = requires(T x) {

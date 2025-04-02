@@ -1,4 +1,4 @@
-// https://godbolt.org/z/aWMo3rfK7
+// https://godbolt.org/z/WGqhjGWd4
 #include <string>
 #include <iostream>
 #include <cmath>

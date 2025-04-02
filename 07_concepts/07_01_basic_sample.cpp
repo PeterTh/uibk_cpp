@@ -1,4 +1,4 @@
-// https://godbolt.org/z/o44je9ohx
+// https://godbolt.org/z/To89f71M4
 #include <concepts>
 #include <cstddef>
 #include <functional>

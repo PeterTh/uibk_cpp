@@ -1,4 +1,4 @@
-// https://godbolt.org/z/43GhsYxnc
+
 class ComplexShape {
 	mutable bool volumeCalculated = false;
 	mutable double volume;

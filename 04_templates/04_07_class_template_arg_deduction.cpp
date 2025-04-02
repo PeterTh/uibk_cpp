@@ -1,5 +1,5 @@
 // you can see this example working with recent GCC and Clang versions here:
-// https://godbolt.org/z/r6Ysq4dPe
+// https://godbolt.org/z/xvnxjcnK9
 
 #include <algorithm>
 #include <type_traits>

@@ -1,4 +1,4 @@
-// https://godbolt.org/z/GvqvYEW1o
+// https://godbolt.org/z/bsTfzEzan
 #include <iostream>
 
 struct Foo {
