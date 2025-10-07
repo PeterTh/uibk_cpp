@@ -1,4 +1,4 @@
-
+// https://godbolt.org/z/v757ca5oW
 class Vector {
 	float contents[10];
 

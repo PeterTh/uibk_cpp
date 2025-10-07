@@ -1,4 +1,4 @@
-
+// https://godbolt.org/z/TGqsGba5x
 // Some examples are taken (or minimally adapted) from the C++ Core Guidelines
 
 #include <cmath>

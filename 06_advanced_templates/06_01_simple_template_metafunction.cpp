@@ -1,3 +1,4 @@
+// https://godbolt.org/z/oaWPrb6e5
 #include <iostream>
 #include <climits>
 

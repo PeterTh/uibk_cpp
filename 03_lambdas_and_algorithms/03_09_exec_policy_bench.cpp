@@ -1,5 +1,5 @@
 // g++ main.cpp -O3 -std=c++20 -ltbb -Wall -Wextra -o main
-
+// https://godbolt.org/z/xfPWd8orh
 #include <algorithm>
 #include <iomanip>
 #include <numeric>

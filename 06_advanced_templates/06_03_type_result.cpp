@@ -1,3 +1,4 @@
+// https://godbolt.org/z/PdP48h9ET
 #include <type_traits>
 #include <iostream>
 
