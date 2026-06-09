@@ -1,3 +1,4 @@
+// https://godbolt.org/z/ns1xecTfb
 #include <iostream>
 #include <iomanip>
 

@@ -1,3 +1,4 @@
+// https://godbolt.org/z/fM678oGcf
 #include <iostream>
 
 /// Dependent name

@@ -1,3 +1,4 @@
+// https://godbolt.org/z/b3vzz9rdd
 
 void take_int_ref(int& i) {}
 

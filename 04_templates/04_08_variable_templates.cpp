@@ -1,4 +1,4 @@
-
+// https://godbolt.org/z/8PKz1bnYr
 // variable template for pi
 
 template<class T>

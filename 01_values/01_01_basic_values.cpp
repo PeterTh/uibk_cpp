@@ -1,4 +1,4 @@
-
+// https://godbolt.org/z/cfqo6YK7K
 #include <iostream>
 
 void f_int(int i) {

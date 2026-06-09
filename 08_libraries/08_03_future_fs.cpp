@@ -1,3 +1,4 @@
+// https://godbolt.org/z/5T7E4W45r
 #include <iostream>
 #include <string>
 #include <future>

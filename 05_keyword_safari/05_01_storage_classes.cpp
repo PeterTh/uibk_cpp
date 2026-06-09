@@ -1,4 +1,4 @@
-
+// https://godbolt.org/z/xPhrhdYs9
 
 int global1;
 // global1: static storage duration, external linkage
