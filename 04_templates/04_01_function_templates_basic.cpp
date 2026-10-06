@@ -1,4 +1,4 @@
-
+// https://godbolt.org/z/6M7sfK3jT
 #if true
 
 int abs(int x) {

@@ -1,3 +1,5 @@
+// https://godbolt.org/z/PKTGr39Gh
+#include <algorithm> 
 #include <initializer_list>
 
 template<typename ScalarType, int Length>

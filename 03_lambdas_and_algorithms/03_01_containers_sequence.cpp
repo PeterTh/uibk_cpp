@@ -1,3 +1,4 @@
+// https://godbolt.org/z/KhT8er4Wr
 #include <array>
 #include <vector>
 #include <deque>

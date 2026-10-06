@@ -1,3 +1,4 @@
+// https://godbolt.org/z/c9EvnWffo
 #include <iostream>
 
 class A {

@@ -1,4 +1,4 @@
-// note: this is currently not supported in MSVC 16.8
+// https://godbolt.org/z/WPGscxPdo
 
 #include <concepts>
 #include <cstddef>

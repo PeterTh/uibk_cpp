@@ -1,4 +1,4 @@
-
+// https://godbolt.org/z/o4MEPEjY1
 #include <iostream>
 
 struct C {

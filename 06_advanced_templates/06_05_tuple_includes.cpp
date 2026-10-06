@@ -1,3 +1,4 @@
+// https://godbolt.org/z/nhao6438h
 #include <iostream>
 #include <tuple>
 

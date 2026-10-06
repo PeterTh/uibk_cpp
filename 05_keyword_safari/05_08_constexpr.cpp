@@ -1,4 +1,4 @@
-
+// https://godbolt.org/z/oTaPxP6Ec
 #include <iostream>
 
 constexpr int fac(int n) {
@@ -16,4 +16,3 @@ int main() {
 	constN<fac(4)> out1;
 }
 
-// https://godbolt.org/g/XoaGL9

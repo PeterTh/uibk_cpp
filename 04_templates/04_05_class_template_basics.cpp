@@ -1,3 +1,4 @@
+// https://godbolt.org/z/WE1YqvP7j
 #include <initializer_list>
 #include <algorithm>
 
